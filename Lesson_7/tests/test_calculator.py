@@ -13,7 +13,7 @@ def test_calculator_form(chrome_browser):
     calc_page.open()
 
     # Заполняем поле задержки
-    calc_page.enter_delay(1)
+    calc_page.enter_delay(45)
 
     # Кликаем на кнопки калькулятора
     calc_page.click_calculator_buttons()
