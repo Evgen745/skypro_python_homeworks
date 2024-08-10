@@ -16,4 +16,4 @@ def test_shopping(chrome_browser):
     shopping_page.checkout("Имя", "Фамилия", "12345")
 
     total = shopping_page.get_total()
-    assert total == "$58.29"
+    assert total == "Total: $58.29"

@@ -38,10 +38,21 @@ class FormPage:
         self.browser.find_element(*self._submit_button).click()
 
     def get_zip_code_field_color(self):
+        self._zip_code = (By.ID, "zip-code")
         return self.browser.find_element(*self._zip_code).value_of_css_property('border-color')  # Проверка цвета поля
 
     def get_other_fields_color(self):
         # Проверка цвета других полей
+        self._first_name = (By.ID, "first-name")
+        self._last_name = (By.ID, "last-name")
+        self._address = (By.ID, "address")
+        self._email = (By.ID, "e-mail")
+        self._phone = (By.ID, "phone")
+        self._city = (By.ID, "city")
+        self._country = (By.ID, "country")
+        self._job_position = (By.ID, "job-position")
+        self._company = (By.ID, "company")
+        
         return {
             'first_name': self.browser.find_element(*self._first_name).value_of_css_property('border-color'),
             'last_name': self.browser.find_element(*self._last_name).value_of_css_property('border-color'),

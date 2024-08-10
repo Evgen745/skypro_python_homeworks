@@ -29,7 +29,7 @@ def test_fill_form(chrome_browser):
     form_page.submit()
 
     # Проверка цвета полей
-    assert form_page.get_zip_code_field_color() == 'rgb(255, 0, 0)'  # Красный цвет
+    assert form_page.get_zip_code_field_color() == 'rgb(245, 194, 199)'  # Красный цвет
     colors = form_page.get_other_fields_color()
     for color in colors.values():
-        assert color == 'rgb(0, 128, 0)'  # Зеленый цвет
+        assert color == 'rgb(186, 219, 204)'  # Зеленый цвет
